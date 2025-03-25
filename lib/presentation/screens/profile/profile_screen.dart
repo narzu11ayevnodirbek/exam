@@ -6,6 +6,7 @@ import 'package:exam/presentation/screens/profile/clapped_articles_screen.dart';
 import 'package:exam/presentation/screens/profile/my_account_screen.dart';
 import 'package:exam/presentation/widgets/containers/line_widget.dart';
 import 'package:exam/presentation/widgets/row_like_widget.dart';
+import 'package:exam/presentation/widgets/soon_dialog.dart';
 import 'package:exam/presentation/widgets/statistics_column_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -114,11 +115,38 @@ class ProfileScreen extends StatelessWidget {
             },
           ),
           SizedBox(height: SizeUtils.h(16)),
-          RowLikeWidget(title: "Privacy Settings"),
+          RowLikeWidget(
+            title: "Privacy Settings",
+            onTap: () {
+              SoonDialog.showCustomDialog(
+                  context: context,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  });
+            },
+          ),
           SizedBox(height: SizeUtils.h(16)),
-          RowLikeWidget(title: "Offline Reading"),
+          RowLikeWidget(
+            title: "Offline Reading",
+            onTap: () {
+              SoonDialog.showCustomDialog(
+                  context: context,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  });
+            },
+          ),
           SizedBox(height: SizeUtils.h(16)),
-          RowLikeWidget(title: "About Us"),
+          RowLikeWidget(
+            title: "About Us",
+            onTap: () {
+              SoonDialog.showCustomDialog(
+                  context: context,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  });
+            },
+          ),
         ],
       ),
     );

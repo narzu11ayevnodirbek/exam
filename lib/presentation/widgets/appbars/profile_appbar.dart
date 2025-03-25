@@ -7,18 +7,14 @@ import 'package:flutter_svg/svg.dart';
 class ProfileAppbar extends StatelessWidget implements PreferredSize {
   final String title;
   final VoidCallback? onTap;
-  const ProfileAppbar({
-    super.key,
-    required this.title,
-    this.onTap
-  });
+  const ProfileAppbar({super.key, required this.title, this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: AppColors.primaryColor,
       leading: IconButton(
-        onPressed: () {},
+        onPressed: onTap,
         icon: SvgPicture.asset(
           AppImages.arrowBackIcon,
         ),

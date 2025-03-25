@@ -1,6 +1,7 @@
 import 'package:exam/core/utils/app_colors.dart';
 import 'package:exam/core/utils/app_text_styles.dart';
 import 'package:exam/core/utils/size_utils.dart';
+import 'package:exam/presentation/widgets/soon_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -26,10 +27,20 @@ class SecondaryAppbar extends StatelessWidget implements PreferredSizeWidget {
         ),
       ),
       actions: [
-        SvgPicture.asset(
-          icon,
-          width: SizeUtils.w(16),
-          color: AppColors.primaryTextColor,
+        IconButton(
+          onPressed: () {
+            SoonDialog.showCustomDialog(
+              context: context,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            );
+          },
+          icon: SvgPicture.asset(
+            icon,
+            width: SizeUtils.w(16),
+            color: AppColors.primaryTextColor,
+          ),
         ),
         SizedBox(width: SizeUtils.w(32)),
       ],

@@ -53,55 +53,56 @@ class _ExploreScreenState extends State<ExploreScreen> {
       child: Scaffold(
         backgroundColor: AppColors.primaryColor,
         appBar: SecondaryAppbar(title: "Explore", icon: AppImages.searchIcon),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32),
-          child: Column(
-            children: [
-              SizedBox(height: SizeUtils.h(22)),
-              TabBar(
-                isScrollable: true,
-                onTap: (index) {
-                  selectedIndex = index;
-                  setState(() {});
-                },
-                indicator: BoxDecoration(),
-                dividerColor: Colors.transparent,
-                overlayColor: WidgetStateProperty.all(Colors.transparent),
-                tabs: List.generate(
-                  4,
-                  (index) {
-                    List<String> categories = [
-                      "Travel",
-                      "Technology",
-                      "Business",
-                      "Entertainment"
-                    ];
-                    return Tab(
-                      child: Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 24, vertical: 6),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(56),
-                          color: selectedIndex == index
-                              ? selectedColor
-                              : unselectedColor,
-                          border: Border.all(
-                            color: AppColors.splashBackgroundColor,
-                          ),
+        body: Column(
+          children: [
+            SizedBox(height: SizeUtils.h(22)),
+            TabBar(
+              isScrollable: true,
+              onTap: (index) {
+                selectedIndex = index;
+                setState(() {});
+              },
+              indicator: BoxDecoration(),
+              dividerColor: Colors.transparent,
+              overlayColor: WidgetStateProperty.all(Colors.transparent),
+              tabs: List.generate(
+                4,
+                (index) {
+                  List<String> categories = [
+                    "Travel",
+                    "Technology",
+                    "Business",
+                    "Entertainment"
+                  ];
+                  return Tab(
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 24, vertical: 6),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(56),
+                        color: selectedIndex == index
+                            ? selectedColor
+                            : unselectedColor,
+                        border: Border.all(
+                          color: AppColors.splashBackgroundColor,
                         ),
-                        child: Text(categories[index],
-                            style: AppTextStyles.tabBarText),
                       ),
-                    );
-                  },
-                ),
+                      child: Text(categories[index],
+                          style: AppTextStyles.tabBarText),
+                    ),
+                  );
+                },
               ),
-              SizedBox(height: SizeUtils.h(24)),
-              Expanded(
-                child: TabBarView(
-                  children: [
-                    for (int i = 0; i < 4; i++)
-                      SingleChildScrollView(
+            ),
+            SizedBox(height: SizeUtils.h(24)),
+            Expanded(
+              child: TabBarView(
+                children: [
+                  for (int i = 0; i < 4; i++)
+                    SingleChildScrollView(
+                      child: Padding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: SizeUtils.w(32)),
                         child: Column(
                           children: [
                             ClipRRect(
@@ -140,11 +141,11 @@ class _ExploreScreenState extends State<ExploreScreen> {
                           ],
                         ),
                       ),
-                  ],
-                ),
-              )
-            ],
-          ),
+                    ),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );

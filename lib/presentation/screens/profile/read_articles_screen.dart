@@ -6,14 +6,14 @@ import 'package:exam/presentation/widgets/appbars/profile_appbar.dart';
 import 'package:exam/presentation/widgets/containers/news_container.dart';
 import 'package:flutter/material.dart';
 
-class ClappedArticlesScreen extends StatefulWidget {
-  const ClappedArticlesScreen({super.key});
+class ReadArticlesScreen extends StatefulWidget {
+  const ReadArticlesScreen({super.key});
 
   @override
-  State<ClappedArticlesScreen> createState() => _ClappedArticlesScreenState();
+  State<ReadArticlesScreen> createState() => _ReadArticlesScreenState();
 }
 
-class _ClappedArticlesScreenState extends State<ClappedArticlesScreen> {
+class _ReadArticlesScreenState extends State<ReadArticlesScreen> {
   int selectedIndex = 0;
   Color selectedColor = AppColors.splashBackgroundColor;
   Color unselectedColor = AppColors.primaryColor;
@@ -74,7 +74,7 @@ class _ClappedArticlesScreenState extends State<ClappedArticlesScreen> {
       child: Scaffold(
         backgroundColor: AppColors.primaryColor,
         appBar: ProfileAppbar(
-          title: "Clapped Articles",
+          title: "Read Articles",
           onTap: () {
             Navigator.pop(context);
           },
@@ -94,11 +94,23 @@ class _ClappedArticlesScreenState extends State<ClappedArticlesScreen> {
               tabs: List.generate(
                 4,
                 (index) {
-                  List<String> categories = [
-                    "Travel",
-                    "Technology",
-                    "Business",
-                    "Entertainment"
+                  List<Map<String, dynamic>> categories = [
+                    {
+                      "text": "All",
+                      "count": "(132)",
+                    },
+                    {
+                      "text": "Travel",
+                      "count": "(51)",
+                    },
+                    {
+                      "text": "Technology",
+                      "count": "(16)",
+                    },
+                    {
+                      "text": "Entertainment",
+                      "count": "(5)",
+                    },
                   ];
                   return Tab(
                     child: Container(
@@ -113,8 +125,20 @@ class _ClappedArticlesScreenState extends State<ClappedArticlesScreen> {
                           color: AppColors.splashBackgroundColor,
                         ),
                       ),
-                      child: Text(categories[index],
-                          style: AppTextStyles.tabBarText),
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: categories[index]["text"],
+                              style: AppTextStyles.tabBarText,
+                            ),
+                            TextSpan(
+                              text: categories[index]["count"],
+                              style: AppTextStyles.descriptionText,
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   );
                 },
