@@ -94,11 +94,23 @@ class _ClappedArticlesScreenState extends State<ClappedArticlesScreen> {
               tabs: List.generate(
                 4,
                 (index) {
-                  List<String> categories = [
-                    "Travel",
-                    "Technology",
-                    "Business",
-                    "Entertainment"
+                  List<Map<String, String>> categories = [
+                    {
+                      "text": "All",
+                      "count": " (132)",
+                    },
+                    {
+                      "text": "Travel",
+                      "count": " (51)",
+                    },
+                    {
+                      "text": "Technology",
+                      "count": " (16)",
+                    },
+                    {
+                      "text": "Entertainment",
+                      "count": " (5)",
+                    },
                   ];
                   return Tab(
                     child: Container(
@@ -113,8 +125,20 @@ class _ClappedArticlesScreenState extends State<ClappedArticlesScreen> {
                           color: AppColors.splashBackgroundColor,
                         ),
                       ),
-                      child: Text(categories[index],
-                          style: AppTextStyles.tabBarText),
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: categories[index]["text"],
+                              style: AppTextStyles.tabBarText,
+                            ),
+                            TextSpan(
+                              text: categories[index]["count"],
+                              style: AppTextStyles.descriptionText,
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   );
                 },

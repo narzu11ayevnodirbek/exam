@@ -4,11 +4,13 @@ import 'package:exam/core/utils/app_text_styles.dart';
 import 'package:exam/core/utils/size_utils.dart';
 import 'package:exam/presentation/screens/profile/clapped_articles_screen.dart';
 import 'package:exam/presentation/screens/profile/my_account_screen.dart';
+import 'package:exam/presentation/screens/profile/read_articles_screen.dart';
 import 'package:exam/presentation/widgets/containers/line_widget.dart';
 import 'package:exam/presentation/widgets/row_like_widget.dart';
 import 'package:exam/presentation/widgets/soon_dialog.dart';
 import 'package:exam/presentation/widgets/statistics_column_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -42,9 +44,18 @@ class ProfileScreen extends StatelessWidget {
                       "Dianne Russelll",
                       style: AppTextStyles.largeSubHeading,
                     ),
-                    Text(
-                      "Bookworm",
-                      style: AppTextStyles.statusText,
+                    Row(
+                      spacing: 8,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/icons/bookworm.svg",
+                          width: 20,
+                        ),
+                        Text(
+                          "Bookworm",
+                          style: AppTextStyles.statusText,
+                        ),
+                      ],
                     ),
                   ],
                 )
@@ -89,7 +100,7 @@ class ProfileScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ClappedArticlesScreen(),
+                  builder: (context) => ReadArticlesScreen(),
                 ),
               );
             },

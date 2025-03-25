@@ -94,22 +94,22 @@ class _ReadArticlesScreenState extends State<ReadArticlesScreen> {
               tabs: List.generate(
                 4,
                 (index) {
-                  List<Map<String, dynamic>> categories = [
+                  List<Map<String, String>> categories = [
                     {
                       "text": "All",
-                      "count": "(132)",
+                      "count": " (132)",
                     },
                     {
                       "text": "Travel",
-                      "count": "(51)",
+                      "count": " (51)",
                     },
                     {
                       "text": "Technology",
-                      "count": "(16)",
+                      "count": " (16)",
                     },
                     {
                       "text": "Entertainment",
-                      "count": "(5)",
+                      "count": " (5)",
                     },
                   ];
                   return Tab(
