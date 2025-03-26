@@ -1,8 +1,4 @@
-import 'package:exam/core/utils/app_colors.dart';
-import 'package:exam/core/utils/app_images.dart';
-import 'package:exam/core/utils/app_text_styles.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:exam/imports.dart';
 
 class ProfileAppbar extends StatelessWidget implements PreferredSize {
   final String title;

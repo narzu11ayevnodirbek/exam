@@ -1,14 +1,5 @@
+import 'package:exam/imports.dart';
 import 'dart:ui';
-
-import 'package:exam/core/utils/app_colors.dart';
-import 'package:exam/core/utils/app_images.dart';
-import 'package:exam/core/utils/size_utils.dart';
-import 'package:exam/presentation/screens/bookmark/bookmark_screen.dart';
-import 'package:exam/presentation/screens/explore/explore_screen.dart';
-import 'package:exam/presentation/screens/home/home_screen.dart';
-import 'package:exam/presentation/screens/profile/profile_screen.dart';
-import 'package:exam/presentation/widgets/bottom_navigation_bar_icon.dart';
-import 'package:flutter/material.dart';
 
 class AppLayout extends StatefulWidget {
   const AppLayout({super.key});

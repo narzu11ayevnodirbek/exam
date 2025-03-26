@@ -1,8 +1,4 @@
-import 'package:exam/core/utils/app_colors.dart';
-import 'package:exam/core/utils/app_images.dart';
-import 'package:exam/presentation/widgets/containers/bookmark_news.dart';
-import 'package:exam/presentation/widgets/appbars/secondary_appbar.dart';
-import 'package:flutter/material.dart';
+import 'package:exam/imports.dart';
 
 class BookmarkScreen extends StatelessWidget {
   const BookmarkScreen({super.key});

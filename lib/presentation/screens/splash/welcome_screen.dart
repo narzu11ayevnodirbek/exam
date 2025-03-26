@@ -1,10 +1,4 @@
-import 'package:exam/core/utils/app_colors.dart';
-import 'package:exam/core/utils/app_images.dart';
-import 'package:exam/core/utils/app_text_styles.dart';
-import 'package:exam/core/utils/size_utils.dart';
-import 'package:exam/presentation/screens/app_layout.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:exam/imports.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});

@@ -1,7 +1,4 @@
-import 'package:exam/core/utils/app_text_styles.dart';
-import 'package:exam/core/utils/size_utils.dart';
-import 'package:exam/presentation/screens/home/article_screen.dart';
-import 'package:flutter/material.dart';
+import 'package:exam/imports.dart';
 
 class HomeItems extends StatelessWidget {
   final String image;

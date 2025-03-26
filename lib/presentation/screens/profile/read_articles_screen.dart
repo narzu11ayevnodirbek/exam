@@ -1,10 +1,4 @@
-import 'package:exam/core/utils/app_colors.dart';
-import 'package:exam/core/utils/app_images.dart';
-import 'package:exam/core/utils/app_text_styles.dart';
-import 'package:exam/core/utils/size_utils.dart';
-import 'package:exam/presentation/widgets/appbars/profile_appbar.dart';
-import 'package:exam/presentation/widgets/containers/news_container.dart';
-import 'package:flutter/material.dart';
+import 'package:exam/imports.dart';
 
 class ReadArticlesScreen extends StatefulWidget {
   const ReadArticlesScreen({super.key});

@@ -1,10 +1,4 @@
-import 'package:exam/core/utils/app_colors.dart';
-import 'package:exam/core/utils/app_images.dart';
-import 'package:exam/core/utils/app_text_styles.dart';
-import 'package:exam/core/utils/size_utils.dart';
-import 'package:exam/presentation/widgets/containers/home_items.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:exam/imports.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

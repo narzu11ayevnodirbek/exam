@@ -1,13 +1,5 @@
+import 'package:exam/imports.dart';
 import 'dart:ui';
-
-import 'package:exam/core/utils/app_colors.dart';
-import 'package:exam/core/utils/app_images.dart';
-import 'package:exam/core/utils/app_text_styles.dart';
-import 'package:exam/core/utils/size_utils.dart';
-import 'package:exam/presentation/widgets/authors_widget.dart';
-import 'package:exam/presentation/widgets/soon_dialog.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class ArticleScreen extends StatelessWidget {
   const ArticleScreen({super.key});

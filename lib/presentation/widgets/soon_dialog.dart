@@ -1,7 +1,4 @@
-import 'package:exam/core/utils/app_colors.dart';
-import 'package:exam/core/utils/app_text_styles.dart';
-import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+import 'package:exam/imports.dart';
 
 class SoonDialog {
   static Future<void> showCustomDialog({

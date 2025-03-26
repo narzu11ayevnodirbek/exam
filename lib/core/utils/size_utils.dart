@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:exam/imports.dart';
 
 class SizeUtils {
   static late double screenWidth;

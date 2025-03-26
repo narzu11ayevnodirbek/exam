@@ -1,8 +1,4 @@
-import 'package:exam/core/utils/app_colors.dart';
-import 'package:exam/presentation/widgets/appbars/profile_appbar.dart';
-import 'package:exam/presentation/widgets/containers/line_widget.dart';
-import 'package:exam/presentation/widgets/row_like_widget.dart';
-import 'package:flutter/material.dart';
+import 'package:exam/imports.dart';
 
 class MyAccountScreen extends StatelessWidget {
   const MyAccountScreen({super.key});

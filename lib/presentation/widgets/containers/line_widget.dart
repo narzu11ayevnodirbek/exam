@@ -1,6 +1,4 @@
-import 'package:exam/core/utils/app_colors.dart';
-import 'package:exam/core/utils/size_utils.dart';
-import 'package:flutter/material.dart';
+import 'package:exam/imports.dart';
 
 class LineWidget extends StatelessWidget {
   const LineWidget({super.key});
